@@ -1,0 +1,1 @@
+INSERT INTO student_form.students (first_name, last_name, email, street, city, state, zip, phone, birth_date, sex, date_entered, lunch_cost, student_id) VALUES ('John', 'Doe', 'jd@jackdaniels.com', 'footpath', 'berlin', 'nj', 9876, '2324345678', '2007-04-19', 'M', '2019-04-28 20:42:10', 23, 1);
