@@ -24,7 +24,7 @@ public class DeleteServlet extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/student_form",
-                    "root", "qwe1ASD2#");
+                    "root", "123456");
             Statement ps = conn
                     .createStatement();
             String sql = "delete from students  where student_id = " + id;
@@ -34,10 +34,10 @@ public class DeleteServlet extends HttpServlet {
 
             int i = ps.executeUpdate(sql);
             if (i > 0)
-                out.print("You have successfully updated...");
+                out.print("Thank you! You have successfully deleted...");
 
         } catch (Exception e2) {
-            System.out.println(e2);
+            out.print("There is some exception. Please try again");
         }
 
         out.close();

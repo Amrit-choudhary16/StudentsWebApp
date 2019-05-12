@@ -36,7 +36,7 @@ public class RegisterServlet extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/student_form",
-                    "root", "qwe1ASD2#");
+                    "root", "123456");
             Statement ps = conn
                     .createStatement();
             String sql = "insert into students (first_name, last_name, email, street, city, state, zip, phone, birth_date, sex, lunch_cost)" +
@@ -45,10 +45,10 @@ public class RegisterServlet extends HttpServlet {
 
             int i = ps.executeUpdate(sql);
             if (i > 0)
-                out.print("You are successfully registered...");
+                out.print("Thank you! You are successfully registered...");
 
         } catch (Exception e2) {
-            System.out.println(e2);
+            out.print("There is some exception. Please try again");
         }
 
         out.close();

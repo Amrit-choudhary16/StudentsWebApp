@@ -32,6 +32,15 @@ public class DeleteSearchRecordsServlet extends HttpServlet {
         out.println("    <th>First Name</th>");
         out.println("    <th>Last Name</th> ");
         out.println("    <th>EMAIL</th> ");
+        out.println("    <th>street</th> ");
+        out.println("    <th>city</th> ");
+        out.println("    <th>state</th> ");
+        out.println("    <th>zip</th> ");
+        out.println("    <th>phone no</th> ");
+        out.println("    <th>DOB</th> ");
+        out.println("    <th>sex</th> ");
+        out.println("    <th>Date entered</th> ");
+        out.println("    <th>lunch cost</th> ");
         out.println("    <th></th>");
         out.println("    <th></th>");
         out.println("  </tr>");
@@ -41,7 +50,7 @@ public class DeleteSearchRecordsServlet extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/student_form",
-                    "root", "qwe1ASD2#");   // For MySQL
+                    "root", "123456");   // For MySQL
             Statement stmt = conn.createStatement();
 
             // Step 3: Execute a SQL SELECT query

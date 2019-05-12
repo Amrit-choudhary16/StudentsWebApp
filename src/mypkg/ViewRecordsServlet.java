@@ -45,7 +45,7 @@ public class ViewRecordsServlet extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/student_form",
-                    "root", "qwe1ASD2#");   // For MySQL
+                    "root", "123456");   // For MySQL
             Statement stmt = conn.createStatement();
 
             // Step 3: Execute a SQL SELECT query
