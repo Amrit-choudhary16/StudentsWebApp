@@ -31,6 +31,7 @@ public class DeleteSearchRecordsServlet extends HttpServlet {
         out.println("    <th>ID</th>");
         out.println("    <th>First Name</th>");
         out.println("    <th>Last Name</th> ");
+        out.println("    <th>EMAIL</th> ");
         out.println("    <th></th>");
         out.println("    <th></th>");
         out.println("  </tr>");
@@ -60,7 +61,27 @@ public class DeleteSearchRecordsServlet extends HttpServlet {
                         + "</td> " +
                         "<td> " + rset.getString("first_name")
                         + "</td> " +
-                        "<td> " + rset.getString("last_name")+ "</td>");
+                        "<td> " + rset.getString("last_name")
+                        + "</td> " +
+                        "<td>" + rset.getString("email")
+                                + "</td> " +
+                                "<td>" + rset.getString("street")
+                                + "</td> " +
+                                "<td>" + rset.getString("city")
+                                + "</td> " +
+                                "<td>" + rset.getString("state")
+                                + "</td> " +
+                                "<td>" + rset.getString("zip")
+                                + "</td> " +
+                                "<td>" + rset.getString("phone")
+                                + "</td> " +
+                                "<td>" + rset.getString("birth_date")
+                                + "</td> " +
+                        "<td>" + rset.getString("sex")
+                                + "</td> " +
+                                "<td>" + rset.getString("date_entered")
+                                + "</td> " +
+                                "<td>" + rset.getString("lunch_cost") + "</td>");
 
 
                 out.println(" <td> <input type=\"submit\" value=\"Delete\"> </td>");

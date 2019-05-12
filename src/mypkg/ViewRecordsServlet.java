@@ -1,6 +1,5 @@
 package mypkg;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,9 +14,7 @@ public class ViewRecordsServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
-        // Set the response message's MIME type
         response.setContentType("text/html;charset=UTF-8");
-        // Allocate a output writer to write the response message into the network socket
         PrintWriter out = response.getWriter();
 
         // Write the response message, in an HTML page
@@ -36,6 +33,14 @@ public class ViewRecordsServlet extends HttpServlet {
             out.println("    <th>First Name</th>");
             out.println("    <th>Last Name</th> ");
             out.println("    <th>Date Of Birth</th>");
+            out.println("    <th>Email</th>");
+            out.println("    <th>street</th>");
+            out.println("    <th>city</th>");
+            out.println("    <th>state</th>");
+            out.println("    <th>zip</th>");
+            out.println("    <th>phone no</th>");
+            out.println("    <th>sex</th>");
+            out.println("    <th>lunch cost</th>");
             out.println("  </tr>");
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
@@ -54,7 +59,15 @@ public class ViewRecordsServlet extends HttpServlet {
                 out.println("<td>" + rset.getString("student_id")
                         + "</td> <td> " + rset.getString("first_name")
                         + "</td> <td> " + rset.getString("last_name")
-                        + "</td> <td> " + rset.getDate("birth_date") + "</td>");
+                        + "</td> <td> " + rset.getDate("birth_date")
+                        + "</td> <td> " + rset.getString("email")
+                        + "</td> <td> " + rset.getString("street")
+                        + "</td> <td> " + rset.getString("city")
+                        + "</td> <td> " + rset.getString("state")
+                        + "</td> <td> " + rset.getString("zip")
+                        + "</td> <td> " + rset.getString("phone")
+                        + "</td> <td> " + rset.getString("sex")
+                        + "</td> <td> " + rset.getString("lunch_cost") + "</td>");
                 out.println("</tr>");
             }
             out.println("</table>");
