@@ -43,6 +43,12 @@ public class AddRecordsServlet extends HttpServlet {
             out.println("  <input type=\"text\" name=\"cost\"  > <br><br>");
             out.println("  <input type=\"submit\" value=\"Submit\">");
             out.println("  <input type=\"reset\" value=\"Reset\">");
+            out.println(" <br>");
+            out.println("</form>");
+
+
+            out.println("<form method='get' action=\"bulkupload\">");
+            out.println("  <input type=\"submit\" value=\"Bulk Upload\">");
             out.println("</form>");
 
             out.println("</body>");
